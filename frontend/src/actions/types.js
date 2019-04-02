@@ -1,0 +1,2 @@
+// SCRAPE REDUCER
+export const GET_SCRAPE_DATA = 'GET_SCRAPE_DATA';
