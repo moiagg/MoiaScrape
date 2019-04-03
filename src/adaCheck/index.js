@@ -52,7 +52,6 @@ const checkAda = (url, error, response, html, $) => {
 
 				$('a').filter((index) => {
 					const data = $('a')[index];
-					// console.log(data.text())
 					const title = data.attribs.title;
 					let linkText;
 					if (!data.children[0].data){
@@ -65,17 +64,16 @@ const checkAda = (url, error, response, html, $) => {
 						missingLinkTitle = i++;
 					}
 					// Fix link text
-					// if (!linkText||linkText=='undefined') {
-					//     missingLinkText = i++;
-					// }
+					if (!linkText||linkText=='undefined') {
+					    missingLinkText = i++;
+					}
 				});
 				json.missingLinkTitle = missingLinkTitle;
-				// json.missingLinkText = missingLinkText;
+				json.missingLinkText = missingLinkText;
 			}
 		};
 		const checkImages = () => {
 			if (json.numberOfImages !== 0) {
-				// console.log("We Have Links That Need Checking...");
 				let i = 0;
 				$('img').filter((index) => {
 					const data = $('img')[index];
