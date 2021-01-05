@@ -9,7 +9,7 @@
     "now-build": "next build"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "classnames": "^2.2.6",
     "isomorphic-unfetch": "^3.0.0",
     "jwt-decode": "^2.2.0",
